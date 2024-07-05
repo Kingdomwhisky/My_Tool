@@ -1,0 +1,45 @@
+### uVision2 Project, (C) Keil Software
+### Do not modify !
+
+ cExt (*.c)
+ aExt (*.s*; *.src; *.a*)
+ oExt (*.obj)
+ lExt (*.lib)
+ tExt (*.txt; *.h; *.inc)
+ pExt (*.plm)
+ CppX (*.cpp)
+ DaveTm { 0,0,0,0,0,0,0,0 }
+
+Target (RTD2796_GAMMA_PARTITION), 0x0000 // Tools: 'MCS-51'
+GRPOPT 1,(Common),0,0,0
+GRPOPT 2,(Bank0),0,0,0
+GRPOPT 3,(Bank1),0,0,0
+GRPOPT 4,(Bank2),0,0,0
+GRPOPT 5,(Bank3),0,0,0
+
+OPTFFF 1,1,1,0,0,0,0,0,<.\Partition\Main.c><Main.c> 
+OPTFFF 1,2,2,0,0,0,0,0,<.\Partition\L51_BANK.A51><L51_BANK.A51> 
+OPTFFF 1,3,2,0,0,0,0,0,<.\Partition\STARTUP.A51><STARTUP.A51> 
+OPTFFF 2,4,1,570425344,0,7,7,0,<.\Partition\Partition0.c><Partition0.c> { 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,248,255,255,255,225,255,255,255,26,0,0,0,26,0,0,0,231,3,0,0,249,0,0,0 }
+OPTFFF 3,5,1,570425344,0,7,7,0,<.\Partition\Partition1.c><Partition1.c> { 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,248,255,255,255,225,255,255,255,52,0,0,0,52,0,0,0,1,4,0,0,19,1,0,0 }
+OPTFFF 4,6,1,570425344,0,7,7,0,<.\Partition\Partition2.c><Partition2.c> { 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,248,255,255,255,225,255,255,255,78,0,0,0,78,0,0,0,27,4,0,0,45,1,0,0 }
+OPTFFF 5,7,1,1023410178,0,1,1,0,<.\Partition\Partition3.c><Partition3.c> { 44,0,0,0,2,0,0,0,3,0,0,0,255,255,255,255,255,255,255,255,248,255,255,255,225,255,255,255,78,0,0,0,78,0,0,0,47,4,0,0,51,1,0,0 }
+
+
+TARGOPT 1, (RTD2796_GAMMA_PARTITION)
+ CLK51=33000000
+  OPTTT 0,1,1,0
+  OPTHX 0,65535,0,0,0
+  OPTLX 120,65,8,<..\..\OUTPUT\>
+  OPTOX 16
+  OPTLT 1,1,1,0,1,1,0,1,0,0,0,0
+  OPTXL 1,1,1,1,1,1,1,0,0
+  OPTFL 1,0,1
+  OPTAX 0
+  OPTDL (S8051.DLL)()(DP51.DLL)(-p51R+)(S8051.DLL)()(TP51.DLL)(-p51R+)
+  OPTDBG 48125,-1,()()()()()()()()()() ()()()()
+  OPTDF 0x0
+  OPTLE <>
+  OPTLC <>
+EndOpt
+

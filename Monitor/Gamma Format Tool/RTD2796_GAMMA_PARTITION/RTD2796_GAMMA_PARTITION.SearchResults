@@ -1,0 +1,4 @@
+---- tPCM_INPUTGAMMA_SRGB Matches (3 in 3 files) ----
+BeaconGammaTab_6x2.h (project\gamma_partition\partition):BYTE code tPCM_INPUTGAMMA_SRGB[] =
+BeaconGammaTab_7x2.h (project\gamma_partition\partition):BYTE code tPCM_INPUTGAMMA_SRGB[] =
+BeaconGammaTab_9x2.h (project\gamma_partition\partition):BYTE code tPCM_INPUTGAMMA_SRGB[] =

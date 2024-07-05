@@ -1,0 +1,7 @@
+BankArea(0x0000,0xFFFF) 
+PRINT("..\..\OUTPUT\RTD2796_GAMMA_PARTITION.m51") 
+RAMSIZE(256) 
+
+BANK0(?CO?Partition0)
+BANK1(?CO?Partition1)
+BANK2(?CO?Partition2)

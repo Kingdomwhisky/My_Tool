@@ -1,0 +1,14 @@
+@echo off
+cd ..
+cd utility
+
+FOR %%X IN (00 01 02 03) DO hexbin ..\..\output\RTD2796_GAMMA_PARTITION.h%%X ..\..\output\RTD2796_GAMMA_PARTITION.b%%X > NUL
+
+combine ..\..\output\RTD2796_GAMMA_PARTITION 8 FF
+
+copy ..\..\output\RTD2796_GAMMA_PARTITION.H00 ..\..\bin\RTD2796_GAMMA_PARTITION.H00
+copy ..\..\output\RTD2796_GAMMA_PARTITION.H01 ..\..\bin\RTD2796_GAMMA_PARTITION.H01
+copy ..\..\output\RTD2796_GAMMA_PARTITION.H02 ..\..\bin\RTD2796_GAMMA_PARTITION.H02
+
+copy ..\..\output\RTD2796_GAMMA_PARTITION.BIN ..\..\bin\RTD2796_GAMMA_PARTITION.BIN
+
